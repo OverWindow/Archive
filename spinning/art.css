@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-color: rgb(234, 155, 75);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    width:500px;
+    height:500px;
+    background-color: white;
+    border-radius: 50%;
+    border: 15px solid white;
+    position: relative;
+    overflow: hidden;
+    transition: 2s;
+    
+}
+
+.container div{
+    /*height: 50%;*/
+    width:200px;
+    position: absolute;
+    clip-path:polygon(100% 0, 50% 100%, 0 0 );
+    transform: translateX(-50%);
+    transform-origin:bottom;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family:'Signika Negative', sans-serif;
+    color: white;
+    left:135px;
+}
+
+.container .one{
+    background-color: rgb(234, 155, 75);
+    height:50%;
+    left: 50.1%;
+}
+.container .two{
+    background-color: rgb(234, 160, 75);
+    height:50%;
+    transform: rotate(45deg);
+}
+.container .three{
+    background-color: rgb(234,165, 75);
+    height:50%;
+    transform: rotate(90deg);
+}
+.container .four{
+    background-color: rgb(234,170, 75);
+    height: 50%;
+    transform: rotate(135deg);
+}
+.container .five{
+    background-color: rgb(234,175,75);
+    height: 50%;
+    transform:rotate(180deg);
+}
+.container .six{
+    background-color: rgb(234,180,75);
+    height: 50%;
+    transform: rotate(225deg);
+}
+.container .seven{
+    background-color: rgb(234,185,80);
+    height: 50%;
+    transform: rotate(270deg);
+}
+.container .eight{
+    background-color: rgb(234,190,75);
+    height: 50%;
+    transform: rotate(315deg);
+}
+
+#spin {
+    width: 15%;
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:'Signika Negative', sans-serif;
+    color: white;
+    font-size: larger;
+    background-color: rgb(234, 155, 75);
+    border: 3px solid white;
+    transform: translate( -50%, 100%);
+    top: 83%;
+    left: 50%;
+}
