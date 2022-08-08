@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+
+body{
+    background-color: rgb(234, 155, 75);
+    font-family: 'Signika Negative', sans-serif;
+    margin: 0;
+}
+
+.Top{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+    background-color: white;
+    border-bottom: 1px solid black;
+  
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.myphoto{
+    border-radius: 50%;
+    margin: 30px;
+    width: 20%;
+    height: 20%;
+    border: 5px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Bottom{
+    background-color: white;
+    border-top: 1px solid black;
+    width: 100%;
+    height: 1000px;
+}
+
+.tools{
+    display: block;
+    margin-top: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 30px;
+    width: 50%;
+
+    font-size:25px;
+    font-weight: 100;   
+}
+
+
+.link{
+    text-align: center;
+    border: 2px solid rgb(234, 155, 75);
+    font-size: 20px;
+}
+
+
+.github{
+    display: block;
+    margin-top: 5px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+
+    text-align: center;
+    font-size: 20px;
+}
