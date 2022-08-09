@@ -97,6 +97,7 @@ li{
     }
 
     .nav_right {
+        padding-top: 10px;
         justify-content: center;
         display: none;
     }
