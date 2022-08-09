@@ -1,25 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
 
+/* overall management */
+
+:root {
+    --background-color: white;
+    --main-color: rgb(234,155,75);
+}
+
 body{
-    background-color: rgb(234, 155, 75);
+    background-color: var(--main-color);
     font-family: 'Signika Negative', sans-serif;
     margin: 0;
 }
 
-.Top{
-    text-align: center;
-    font-size: 45px;
-    font-weight: 500;
-    background-color: white;
-    border-bottom: 1px solid black;
-  
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-
-    padding-top: 25px;
-    padding-bottom: 25px;
+a{
+    text-decoration: none;
+    color: rgb(3, 94, 130);
 }
+
+li{
+    list-style: none;
+}
+
+/* navigation bar part */
+
+.nav{
+    display: flex;
+    background-color: var(--background-color);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav_left{
+    display: flex;
+    font-size: 40px;
+    margin-left: 20px;
+    width: 300px;
+}
+
+.nav_middle{
+    display: flex;
+    padding: 0;
+}
+
+.nav_middle li{
+    padding: 8px 16px;  
+    border-radius: 5px;
+}
+
+.nav_middle li:hover{
+    background-color: var(--main-color);
+}
+
+.nav_right{
+    font-size: 30px;
+    padding-right: 20px;
+    display: flex;
+    width: 300px;
+    justify-content: right;
+}
+
+.nav_right li{
+    padding-left: 15px;
+}
+
+.nav_right a{
+    color: black;
+}
+
+.button{
+    position:absolute;
+    font-size: 30px;
+    top: 21px;
+    left: 93%;
+    display: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+@media only screen and (max-width: 800px) {
+    .nav{
+        flex-direction: column;
+    }
+
+    .nav_left {
+        justify-content: left;
+        width: 100%;
+    }
+
+    .nav_middle {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav_right {
+        justify-content: center;
+        display: none;
+    }
+
+    .button {
+        display: block;
+    }
+
+    .nav_middle.active,
+    .nav_right.active{
+        display: flex;
+    }
+}
+
+/* photo part */
 
 .myphoto{
     border-radius: 50%;
@@ -32,8 +124,10 @@ body{
     margin-right: auto;
 }
 
+/* bottom part */
+
 .Bottom{
-    background-color: white;
+    background-color: var(--background-color);
     border-top: 1px solid black;
     width: 100%;
     height: 1000px;
@@ -54,18 +148,8 @@ body{
 
 .link{
     text-align: center;
-    border: 2px solid rgb(234, 155, 75);
+    border: 2px solid var(--main-color);
     font-size: 20px;
 }
 
 
-.github{
-    display: block;
-    margin-top: 5px;
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-
-    text-align: center;
-    font-size: 20px;
-}
