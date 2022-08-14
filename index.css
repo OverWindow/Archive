@@ -47,13 +47,19 @@ li{
 }
 
 .nav_middle li{
+    padding: 8px 16px;
+}
+
+.nav_middle li a{
     padding: 8px 16px;  
     border-radius: 5px;
 }
 
-.nav_middle li:hover{
+.nav_middle li a:hover{
     background-color: var(--main-color);
+    color: white;
 }
+
 
 .nav_right{
     font-size: 30px;

@@ -34,7 +34,6 @@ function beforeslide() {
 }
 
 function description(currentslide) {
-    console.log("hello");
     switch(currentslide) {
         case 0:
             $title.innerHTML = "Red And Yellow: Zero";
