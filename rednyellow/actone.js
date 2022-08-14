@@ -37,32 +37,32 @@ function description(currentslide) {
     console.log("hello");
     switch(currentslide) {
         case 0:
-             $title.innerHTML = "Red And Yellow: Zero";
-             break;
+            $title.innerHTML = "Red And Yellow: Zero";
+            break;
         case 1:
             $title.innerHTML = "Red And Yellow: One";
             break;
         case 2:
-             $title.innerHTML = "Red And Yellow: Two";
-             break;
+            $title.innerHTML = "Red And Yellow: Two";
+            break;
         case 3:
             $title.innerHTML = "Red And Yellow: Three";
             break;
         case 4:
-             $title.innerHTML = "Red And Yellow: Four";
-             break;
+            $title.innerHTML = "Red And Yellow: Four";
+            break;
         case 5:
             $title.innerHTML = "Red And Yellow: Five";
             break;
         case 6:
-             $title.innerHTML = "Red And Yellow: Six";
-             break;
+            $title.innerHTML = "Red And Yellow: Six";
+            break;
         case 7:
             $title.innerHTML = "Red And Yellow: Seven";
             break;  
         case 8:
-             $title.innerHTML = "Red And Yellow: Eight";
-             break;
+            $title.innerHTML = "Red And Yellow: Eight";
+            break;
         case 9:
             $title.innerHTML = "Red And Yellow: Nine";
             break;     
