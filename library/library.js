@@ -9,6 +9,7 @@ let maxSlide;
 let BookTitle;
 // 120 * 174
 
+/** when right arrow clicks, next book presents*/
 function nextslide() {
     return function() {
         currentSlide += 1;
@@ -34,6 +35,7 @@ function nextslide() {
     }
 }   
 
+/** when left arrow clicks, book before presents */
 function beforeslide() {
     return function() {
         currentSlide -= 1;
@@ -56,6 +58,7 @@ function beforeslide() {
     }
 }
 
+/** after submit button, thumbnail and title of the book presents */
 function BookPresent(temp1) {
     $p.textContent = `${temp1.documents[0].title}`;
     console.log("title shown");
@@ -64,13 +67,14 @@ function BookPresent(temp1) {
     return;
 }
 
+/** for if there isn't book to call */
 function NoBookToCall(value) {
     $p.textContent = `Can't Find A Book That Starts With "${value}" `;
     $bookimage.src = '';
     $rightArrow.style.display = 'none';
 }
 
-
+/** when submit */
 let flag = 0;
 $form.addEventListener('submit', SearchBook = (event) => {
     event.preventDefault(); 
@@ -98,10 +102,12 @@ $form.addEventListener('submit', SearchBook = (event) => {
     })
 });
 
+/** auto erase */
 $input.addEventListener('click',() => {
     $input.value = '';
 });
 
+/** click listeners */
 $rightArrow.addEventListener('click',nextslide());
 $leftArrow.addEventListener('click',beforeslide());
 
