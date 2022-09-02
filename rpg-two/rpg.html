@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RPG</title>
+	<link href="./rpg.css" rel="stylesheet">
+</head>
+
+<body>
+	<form id="start-screen">
+		<div id="title">아무튼 RPG<br>2022.09.03 v2.0</div>
+		<input id="name" placeholder="용사 이름 좀">
+		<button id="name-button">Submit</button>
+		<div id="start-message"></div>
+	</form>
+		<form id="game-menu" style="display: none;">
+			<div id="left-menu">
+				<img id="game-img" src="./assets/GIFs/Knight-Idle.gif">
+			</div>
+			<div id="right-menu">
+				<div id="game-hero-stat">
+					<div id="stat">	
+						<span class="hero-name" ></span>
+						<span class="hero-level"></span>
+						<span class="hero-hp"></span>
+						<span class="hero-xp"></span>
+						<span class="hero-att"></span>
+						<span class="hero-money"></span>
+					</div>
+					<div id="game-message"></div>
+				</div>
+				<div id="action">
+					<div class="menu-1 button">모험</div>
+					<div class="menu-2 button">휴식</div>
+					<div class="menu-3 button">상점</div>
+					<div class="menu-4 button">종료</div>
+				</div>
+			</div>
+		</form>
+
+		<form id="battle-menu" style="display: none;">
+			<div id="top">
+				<div id="battle-hero-stat">
+					<span class="hero-name"></span>
+					<span class="hero-level"></span>
+					<span class="hero-hp"></span><br>
+					<span class="hero-xp"></span>
+					<span class="hero-att"></span>
+					<span class="hero-money"></span>
+				</div>
+				<div id="battle-monster-stat">
+					<span class="monster-name"></span>
+					<span class="monster-hp"></span>
+					<span class="monster-att"></span>
+				</div>
+			</div>
+			<div id="middle">
+				<div id="battle-hero-cover">
+					<img id="battle-hero" src="./assets/GIFs/Knight-Walk.gif">
+				</div>
+				<div id="battle-monster">
+					<img id="img-monster">
+				</div> 
+			</div>
+				<div id="battle-message"></div>
+			<div id="bottom">
+				<div id="battle-action">
+					<div class="battle-1 button">공격</div>
+					<div class="battle-2 button">회복</div>
+					<div class="battle-3 button">포션</div>
+					<div class="battle-4 button">도망</div>
+				</div>
+			</div>
+		</form>
+
+		<form id="potion" style = 'display: none;'>
+			<div id="potion-top">
+				<li class="potion-inventory"></li>
+				<li class="potion-inventory"></li>
+				<li class="potion-inventory"></li>
+			</div>
+			<div id="potion-bottom">
+				<div id="potion-use">아이템 사용하기</div>
+				<div id="potion-exit">돌아가기</div>
+			</div>
+		</form>
+
+		<form id="shop-menu" style="display: none;">
+			<div id="shop-top">
+				<div id="shop-potion">
+					<ol id="shop-potion-list">
+						<h2>상점 진열대</h2>
+						<li class='shop-potions'></li>
+						<li class='shop-potions'></li>
+						<li class='shop-potions'></li>
+						<li class='shop-potions'></li>
+						<li class='shop-potions'></li>
+					</ol>
+				</div>
+				<div id="shop-potion-stat">
+					<span id="potion-name"></span>
+					<span id="potion-cost"></span>
+					<span id="potion-stat"></span>
+				</div>
+			</div>
+			<div id="shop-bottom">
+				<div id="shop-inventory">
+					<ol>
+						<h2>인벤토리</h2><span id="shop-money"></span>
+						<li class="inventory"></li>
+						<li class="inventory"></li>
+						<li class="inventory"></li>
+					</ol>
+				</div>
+				<div id="shop-menu-act">
+					<div id="shop-message"></div>
+					<div id="shop-buy">아이템 구매</div>
+					<div id="shop-sell">아이템 판매</div>
+					<div id="shop-exit">돌아가기</div>
+				</div>
+			</div>
+		</form>
+
+	<script src="rpg.js"></script>
+</body>
+
+</html>

@@ -328,7 +328,7 @@ html{
 }
 
 .three h1{
-    color: rgb(232, 180, 128);
+    color: var(--main-color);
     font-size: 80px;
     position: relative;
 }
@@ -387,10 +387,11 @@ html{
     background-color: var(--background-color);
     border-top: 1px solid black;
     width: 100%;
-    height: 1000px;
+    height: 100%;
     display: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 .tools{
