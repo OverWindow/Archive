@@ -7,7 +7,7 @@ image.onload = function() {
     enableCollisions: true,
     fps: 30,
     enableSizeChange: true,
-    sound: "./sound/docs_sound_rain.mp3"
+    sound: "./sound/docs_sound_rain.mp3",
   });
   engine.trail = engine.TRAIL_SMUDGE;
   engine.rain([ [3, 2, 2] ], 100);
