@@ -2,7 +2,7 @@ const $soundButton = document.querySelector('.sound');
 const $container = document.querySelector('.container');
 let engine = null;
 
-$container.src = 'https://c2.staticflickr.com/6/5142/5653893318_d79d0828c8_b.jpg?w=1024&h=682&auto=compress&cs=tinysrgb';
+//$container.src = 'https://c2.staticflickr.com/6/5142/5653893318_d79d0828c8_b.jpg?w=1024&h=682&auto=compress&cs=tinysrgb';
 
 $soundButton.addEventListener('click',()=>{
   run();
