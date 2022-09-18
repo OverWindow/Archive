@@ -4,6 +4,7 @@ const $nav = document.querySelector(".nav");
 
 document.querySelector('button').addEventListener('click', function() {
   const icon = this.querySelector('i');
+  console.log('clicked');
   if (icon.classList.contains('fa-angle-down')) {
     icon.classList.remove('fa-angle-down');
     icon.classList.add('fa-angle-up');
