@@ -2,6 +2,7 @@ const $nav_middle = document.querySelector(".nav_middle");
 const $nav_right = document.querySelector(".nav_right");
 const $nav = document.querySelector(".nav");
 
+/* when resize menu button */
 document.querySelector('button').addEventListener('click', function() {
     const icon = this.querySelector('i');
     if (icon.classList.contains('fa-angle-down')) {
@@ -18,7 +19,6 @@ document.querySelector('button').addEventListener('click', function() {
   });
 
 /* Logo Switch */
-
 let $slides = document.getElementsByClassName('slide');
 let $dots = document.getElementsByClassName('dot');
 let slideIndex = 2;
@@ -46,3 +46,13 @@ function ShowSlides(n) {
   $dots[n-1].style.width = '17px';
   $dots[n-1].style.borderRadius = '5px';
 }
+
+/* when resized below 1000px ShowSlide(1) */
+window.addEventListener('resize',function() {
+  if(window.matchMedia("(max-width: 1000px)").matches){
+    console.log('shrink');
+    slideIndex = 1;
+    ShowSlides(slideIndex);
+  }
+})
+

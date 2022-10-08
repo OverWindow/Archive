@@ -96,7 +96,7 @@ html{
     border-color: transparent;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .nav{
         flex-direction: column;
     }
