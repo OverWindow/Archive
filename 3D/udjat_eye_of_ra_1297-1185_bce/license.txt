@@ -1,0 +1,8 @@
+Model Information:
+* title:	Udjat Eye of Ra, 1297-1185 BCE
+* source:	https://sketchfab.com/3d-models/udjat-eye-of-ra-1297-1185-bce-7300d219ed944585ace4b2509bef4f6e
+* author:	Minneapolis Institute of Art (https://sketchfab.com/artsmia)
+
+Model License:
+* license type:	CC0-1.0 (http://creativecommons.org/publicdomain/zero/1.0/)
+* requirements:	Credit is not mandatory. Commercial use is allowed.

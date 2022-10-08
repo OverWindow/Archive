@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D using three.js</title>
+    <link href="./3D.css" rel="stylesheet">
+</head>
+<body >
+    <div id="explanation">
+        Ancient Egyptian amulet of the 
+        <br>
+        <h1>Udjat Eye of Ra</h1>
+        <br> 1297-1185 BCE, 
+        <br>now in the collection of the 
+        <br>Minneapolis Institute of Art.
+        <div id="loading"></div>
+    </div>
+    <canvas id="canvas" width="700px" height="700px"></canvas>
+    <button id="button">STOP</button>
+
+    <script type="importmap">
+        {
+            "imports": {
+              "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+              "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+            }
+          }
+    </script>
+    <script type="module">
+        const $loading = document.querySelector('#loading');
+        const $button = document.querySelector('#button');
+
+        /* curser position */
+        let mouseX;
+        let mouseY;
+        window.onload = init;
+        function init() {
+            if (window.Event) {
+            document.captureEvents(Event.MOUSEMOVE);
+            }
+            document.onmousemove = getCursorXY;
+        }
+        function getCursorXY(e) {
+            var xCursorPosition= (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+            var yCursorPosition = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+            mouseX = xCursorPosition;
+            mouseY = yCursorPosition;
+            //console.log(xCursorPosition);
+            //console.log(yCursorPosition);
+        }
+
+       /* Three.js GLTF */
+       import {GLTFLoader} from 'GLTFLoader';
+       import * as THREE from 'three';
+       let scene = new THREE.Scene();
+    
+       /* about rendering */
+       let renderer = new THREE.WebGLRenderer({
+            canvas : document.querySelector('#canvas'),
+            antialias : true
+        });
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        
+        /* camera */
+        let camera = new THREE.PerspectiveCamera(30,1);
+        camera.position.set(0,0,2);
+        
+        /* light and background */
+        scene.background = new THREE.Color('gray');
+        let light = new THREE.DirectionalLight(0xffffff,1);
+        light.position.set(0,0,1);
+        scene.add(light);
+        
+        /* load */
+        let loader = new GLTFLoader();
+        loader.load('./test1.gltf',function(gltf) {
+            let isPlay = 1;
+            scene.add(gltf.scene);
+            /* axis help */
+            /*
+            let axesHelper = new THREE.AxesHelper(100);
+            scene.add(axesHelper);
+            */
+
+           /** animation */
+           function animate() {
+               //console.log(document.querySelector('html').offsetWidth);
+               if(!isPlay) return;
+               requestAnimationFrame(animate);
+               let width = document.querySelector('html').offsetWidth;
+               let height = document.querySelector('html').offsetHeight;
+               gltf.scene.rotation.y = (mouseX/width)*2 - 1;
+               gltf.scene.rotation.x = (mouseY/height)*2 - 1;
+               renderer.render(scene,camera);
+            }
+            $loading.innerHTML = '';
+            animate();
+            //renderer.render(scene,camera);
+            $button.addEventListener('click',buttonClicked);
+            
+            function buttonClicked() {
+                if(isPlay) {
+                    isPlay = 0;
+                    $button.innerHTML = 'Restart';
+                } else {
+                    isPlay = 1;
+                    $button.innerHTML = 'Stop';
+                    animate();
+                }
+            }
+        },function(xhr) {
+            $loading.innerHTML= `<br>(${( xhr.loaded / xhr.total * 100 )}% loaded)`;
+        },function(error) {
+            $loading.innerHTML= 'An error occured while getting image';
+        });
+
+
+      </script>
+      <script src="./3D.js"></script>
+</body>
+</html>

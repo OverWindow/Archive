@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D using three.js</title>
+    <link href="./3D.css" rel="stylesheet">
+</head>
+<body>
+    <div id="explanation">
+        Twelfth-century 
+        <br>
+        <h1>Water-Moon Guanyin</h1>
+        <br>
+        <br>(Avalokiteshvara Bodhisattva 
+        <br>in the Water-Moon Form), 
+        <br>now in the collection of the 
+        <br>Minneapolis Institute of Art.
+        <div id="loading"></div>
+    </div>
+    <canvas id="canvas" width="700px" height="700px"></canvas>
+    <button id="button">STOP</button>
+
+    <script type="importmap">
+        {
+            "imports": {
+              "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+              "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+            }
+          }
+    </script>
+    <script type="module">
+        const $loading = document.querySelector('#loading');
+        const $button = document.querySelector('#button');
+        /* Three.js GLTF */
+        import {GLTFLoader} from 'GLTFLoader';
+        import * as THREE from 'three';
+        
+        let scene = new THREE.Scene();
+        
+        /* about rendering */
+        let renderer = new THREE.WebGLRenderer({
+            canvas : document.querySelector('#canvas'),
+            antialias : true
+        });
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        
+        /* camera */
+        let camera = new THREE.PerspectiveCamera(30,1);
+        camera.position.set(0,0,5);
+        
+        /* light and background */
+        scene.background = new THREE.Color('gray');
+        let light = new THREE.DirectionalLight(0xffffff,1);
+        light.position.set(0,0,1);
+        scene.add(light);
+        
+        /* load */
+        let loader = new GLTFLoader();
+        loader.load('./scene.gltf',function(gltf) {
+            let isPlay = 1;
+            scene.add(gltf.scene);
+            /** animation */
+            function animate() {
+                if(!isPlay) return;
+                requestAnimationFrame(animate);
+                gltf.scene.rotation.y += 0.01;
+                gltf.scene.rotation.x += 0.01;
+                renderer.render(scene,camera);
+
+                
+            }
+            $loading.innerHTML = '';
+            animate();
+            //renderer.render(scene,camera);
+            $button.addEventListener('click',buttonClicked);
+        
+            function buttonClicked() {
+                if(isPlay) {
+                    isPlay = 0;
+                    $button.innerHTML = 'Restart';
+                } else {
+                    isPlay = 1;
+                    $button.innerHTML = 'Stop';
+                    animate();
+                }
+            }
+        },function(xhr) {
+            $loading.innerHTML= `<br>(${( xhr.loaded / xhr.total * 100 )}% loaded)`;
+        },function(error) {
+            $loading.innerHTML= 'An error occured while getting image';
+        });
+
+
+      </script>
+      <script src="./3D.js"></script>
+</body>
+</html>

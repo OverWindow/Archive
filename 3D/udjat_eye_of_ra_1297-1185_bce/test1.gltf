@@ -1,0 +1,188 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.32",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                2
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Object_2",
+            "rotation" : [
+                0.08938422799110413,
+                0.9959972500801086,
+                0,
+                4.967535716104976e-09
+            ],
+            "translation" : [
+                -6.480010986328125,
+                -18.460012435913086,
+                -4.819951057434082
+            ]
+        },
+        {
+            "children" : [
+                0
+            ],
+            "name" : "EyeOfRah_OBJ_.obj.cleaner.materialmerger.gles"
+        },
+        {
+            "children" : [
+                1
+            ],
+            "name" : "Sketchfab_model",
+            "rotation" : [
+                0.05435973033308983,
+                0.9972941279411316,
+                -0.012437253259122372,
+                0.047903891652822495
+            ],
+            "scale" : [
+                0.43821704387664795,
+                0.4382169842720032,
+                0.4382169544696808
+            ],
+            "translation" : [
+                -1.6263877153396606,
+                8.276094436645508,
+                -2.5307562351226807
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "EyeOfRah_OBJ_MeshSG",
+            "normalTexture" : {
+                "index" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.6000000238418579
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Object_0",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "EyeOfRah_OBJ_MeshSG_normal",
+            "uri" : "textures/EyeOfRah_OBJ_MeshSG_normal.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "EyeOfRah_OBJ_MeshSG_baseColor",
+            "uri" : "textures/EyeOfRah_OBJ_MeshSG_baseColor.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 35818,
+            "max" : [
+                0.7061690092086792,
+                0.6214240193367004,
+                0.11778900027275085
+            ],
+            "min" : [
+                -0.642333984375,
+                -0.4924049973487854,
+                -0.09619899839162827
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 35818,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 35818,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 189798,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 429816,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 429816,
+            "byteOffset" : 429816,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 286544,
+            "byteOffset" : 859632,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 379596,
+            "byteOffset" : 1146176,
+            "target" : 34963
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1525772,
+            "uri" : "test1.bin"
+        }
+    ]
+}
