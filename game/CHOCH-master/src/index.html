@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @ifdef DEBUG -->
+    <title>JS13K-2020 debug</title>
+    <!-- @endif -->
+    <!-- @ifndef DEBUG -->
+    <title>JS13K-2020</title>
+    <!-- @endif -->
+
+    <style type="text/css">
+        <!-- @ifdef DEBUG -->
+        .debug {
+            color: #ff00ff;
+            font-size: 14px;
+        }
+        #debug_div {
+            position: absolute;
+        }
+        <!-- @endif -->
+        body { 
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+        }
+        #glcanvas {
+            position: absolute;
+        }
+        #canvas2d {
+           display: none;
+        }
+        #timer {
+            position: absolute;
+            z-index: 2;
+            top: 90%;
+            right: 10%;
+            color: white;
+            font: bold 2.0rem 'Andale Mono', 'Courier New', monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="glcanvas"></canvas>
+    <canvas id="canvas2d"></canvas>
+
+    <!-- @ifdef DEBUG -->
+    <div id="debug_div"></div>
+    <!-- @endif -->
+    <script>
+        <!-- @include js/all.js-->
+    </script>
+
+    <div id="timer">00:00:000</div>
+</body>
+
+</html>

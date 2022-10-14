@@ -15,7 +15,6 @@ body{
     display: column;
     justify-content: center;
     align-items: center;
-
 }
 
 a{
@@ -127,7 +126,7 @@ html{
     }
 }
 
-/* photo part */
+/* middle */
 
 .Middle{
     display: column;
@@ -380,6 +379,56 @@ html{
     width: 17px;
     border-radius: 5px;
     background-color: #e3e3e3;
+}
+
+/* highlight */
+.event {
+    display: block;
+    margin: 10px 25%;
+}
+
+.highlight {
+    background-image: url("./highlight.png");
+    border-radius: 10px;
+    padding: 5px 0;
+    height: 105px;
+    opacity: 0.5;
+    border: 3px solid var(--main-color);
+}
+
+.highlight h1{
+    text-align: center;
+    color: var(--background-color);
+    opacity: 1;
+    padding: 0px 0;
+    margin-top: 30px;
+
+    position: relative;
+    text-decoration: none;
+}
+
+.highlight h1:hover {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.highlight h1::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: 0;
+    left: 20%;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+    
+.highlight h1:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
 }
 /* bottom part */
 
