@@ -1,8 +1,12 @@
 
  RewriteEngine On
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
  RewriteCond %{HTTP_HOST} ^game\.overwindow\.com$ [NC]
  RewriteRule ^(.*) http://www.overwindow.com/game/index.html$1 [L,R]
 
- 
  RewriteCond %{HTTP_HOST} ^community\.overwindow\.com$ [NC]
  RewriteRule ^(.*) http://www.overwindow.com/community/$1 [L,R]

@@ -107,7 +107,7 @@ li{
 
     .nav_middle {
         justify-content: center;
-        width: 100%;
+        width: 80%;
     }
 
     .nav_left {
@@ -218,8 +218,33 @@ main {
     height: 150px;
     padding-top: 50px;
 
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/* for mobile */
+@media only screen and (max-width: 915px) {
+    html,body{
+        overflow-x: hidden;
+    }
+
+    .button {
+        position: absolute;
+        left: 89%;
+    }
+}
+
+/* for Galaxy Fold */
+@media only screen and (max-width: 653px) {
+    .nav_middle {
+        font-size: 30px;
+    }
+
+    .button {
+        position: absolute;
+        left: 85%;
+    }
 }
