@@ -21,7 +21,7 @@ document.querySelector("button").addEventListener("click", function () {
 /* Logo Switch */
 let $slides = document.getElementsByClassName("slide");
 let $dots = document.getElementsByClassName("dot");
-let slideIndex = 2;
+let slideIndex = 1;
 
 ShowSlides(slideIndex);
 

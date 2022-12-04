@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Elevator</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #howMany {
+            font-size: 60px;
+            padding-bottom: 40px;
+        }
+
+        #button {
+            height: 100px;
+            width: 200px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>엘리베이터 사람 수:</h1>
+    <span id="howMany">0명</span>
+    <button id="button">Refresh</button>
+    <script src="./api.js"></script>
+</body>
+
+</html>
