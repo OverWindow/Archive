@@ -9,7 +9,8 @@
     <title>Elevator</title>
     <style>
         html,
-        body {
+        body,
+        #main {
             height: 100%;
             display: flex;
             justify-content: center;
@@ -19,21 +20,48 @@
 
         #howMany {
             font-size: 60px;
-            padding-bottom: 40px;
+            padding-bottom: 30px;
         }
 
         #button {
             height: 100px;
             width: 200px;
-            font-size: 30px;
+            font-size: 50px;
+            border-radius: 20px;
+            box-shadow: 0 9px #666;
+            font-family: Lucida Sans Unicode;
+        }
+
+        #button span {
+            display: inline-block;
+            transform: rotate(90deg);
+        }
+
+        #button:hover {
+            background-color: white
+        }
+
+        #button:active {
+            background-color: lightgray;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        #bottom {
+            padding-bottom: 30px;
+            text-align: center;
         }
     </style>
+    <script src="airtable.browser.js"></script>
 </head>
 
 <body>
-    <h1>엘리베이터 사람 수:</h1>
-    <span id="howMany">0명</span>
-    <button id="button">Refresh</button>
+    <div id="main">
+        <h1>지금 엘리베이터에는:</h1>
+        <span id="howMany">0명</span>
+        <button id="button"><span>↻</span></button>
+    </div>
+    <div id="bottom">Made By<br>숭실대학교 창공 6조</div>
     <script src="./api.js"></script>
 </body>
 
