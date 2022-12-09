@@ -6,62 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Elevator</title>
-    <style>
-        html,
-        body,
-        #main {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        #howMany {
-            font-size: 60px;
-            padding-bottom: 30px;
-        }
-
-        #button {
-            height: 100px;
-            width: 200px;
-            font-size: 50px;
-            border-radius: 20px;
-            box-shadow: 0 9px #666;
-            font-family: Lucida Sans Unicode;
-        }
-
-        #button span {
-            display: inline-block;
-            transform: rotate(90deg);
-        }
-
-        #button:hover {
-            background-color: white
-        }
-
-        #button:active {
-            background-color: lightgray;
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        }
-
-        #bottom {
-            padding-bottom: 30px;
-            text-align: center;
-        }
-    </style>
+    <title>Neural Spacer</title>
+    <link href="./api.css" rel="stylesheet">
     <script src="airtable.browser.js"></script>
 </head>
 
 <body>
-    <div id="main">
-        <h1>지금 엘리베이터에는:</h1>
-        <span id="howMany">0명</span>
-        <button id="button"><span>↻</span></button>
+    <div id="navBar">
+        <section class="top-nav">
+            <div class="projectName">
+                Nueral Space
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li>정보관: 왼쪽 Elev</li>
+                <li>정보관: 오른쪽 Elev</li>
+                <li>Home</li>
+            </ul>
+        </section>
     </div>
-    <div id="bottom">Made By<br>숭실대학교 창공 6조</div>
+    <div class="screen1">
+        <div class="main">
+            <h1>지금 엘리베이터에는:</h1>
+            <span id="howMany">0명</span>
+            <span id="message"></span>
+            <button id="button"><span>↻</span></button>
+        </div>
+    </div>
+    <div class="screen2">
+        <div class="container">
+            <div class="elevatorName"></div>
+            <div>주소: <span class="address1"></span> <span class="address2"></span></div>
+            <div>승강기번호: <span class="elevatorNo"></span></div>
+            <div>승강기상태: <span class="elvtrStts"></span></div>
+            <div>최종검사일: <span class="lastInspctDe"></span></div>
+            <div>최대정원: <span class="ratedCap"></span></div>
+        </div>
+    </div>
+    <div id="bottom">Made By<br>숭실대학교 <span>보드지우개</span> (창공 6조)</div>
     <script src="./api.js"></script>
 </body>
 
