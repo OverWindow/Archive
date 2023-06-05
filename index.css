@@ -471,7 +471,7 @@ html {
 /* highlight */
 .event {
   display: block;
-  margin: 10px 25%;
+  margin: 10px 15%;
 }
 
 .highlight {
@@ -527,16 +527,17 @@ html {
   display: column;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 
 .tools {
   display: block;
   margin-top: 15px;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 15%;
+  margin-right: 15%;
   margin-bottom: 30px;
-  width: 50%;
+  width: 70%;
 
   font-size: 25px;
   font-weight: 100;
@@ -554,11 +555,24 @@ html {
   background-color: var(--sub-color);
 }
 
+/* Ad */
+.Ad-Bottom,
+.Ad-Top {
+  display: block;
+}
+
+.ad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 /* Sub-Bottom */
 .Sub-Bottom {
   background-color: var(--background-color);
   width: 100%;
-  height: 10px;
+  height: 20px;
 
   margin-top: 30px;
   padding-top: 10px;
