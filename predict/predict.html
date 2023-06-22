@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitCoin Forecast</title>
+    <link href="./predict.css" rel="stylesheet">
+    <script src="airtable.browser.js"></script>
+</head>
+
+<body>
+    <div class="left">
+        <div class="coin"><img src="./cryptocurrency.png" width="85%" height="85%"></div>
+        <div class="coin"><span>BitCoin(Won)</span></div>
+    </div>
+    <div class="right">
+        <div id="main">
+            <div id="left-main">
+                <div id="date">2023-06-22</div>
+                <div id="estimation">0.00%</div>
+                <div id="context">Minimum Acceptable Rate of Return</div>
+            </div>
+            <div id="right-main">
+                <button id="button"><span>↻</span></button>
+            </div>
+        </div>
+        <div class="slot">Open Price: </div>
+        <div class="slot">Predicted Price: </div>
+        <div class="slot">Balance: </div>
+    </div>
+    <script src="predict.js"></script>
+</body>
+
+</html>

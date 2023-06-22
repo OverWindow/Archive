@@ -438,6 +438,18 @@ html {
   }
 }
 
+/* four */
+.four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  color: var(--background-color);
+  font-size: 60px;
+}
+
 /* switch */
 
 .switch {
