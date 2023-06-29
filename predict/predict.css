@@ -52,6 +52,7 @@ body {
 }
 
 .right {
+  display: flex;
   background-color: var(--background-color);
   margin: 1%;
   padding: 20px;
@@ -60,26 +61,33 @@ body {
   border-radius: 30px;
 }
 
-#main {
-  background-color: var(--sub-color);
-  width: 100%;
-  height: 60%;
-  border-radius: 30px;
-
-  display: flex;
-  align-items: center;
-  color: var(--main-color);
-}
-
 #left-main {
-  width: 70%;
+  width: 50%;
 }
 
 #right-main {
-  width: 30%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--sub-color);
+  border-radius: 30px;
+  margin-left: 3%;
+  padding: 3%;
+  color: black;
+}
+
+#slot-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 5%;
+  background-color: var(--sub-color);
+  height: 65%;
+  border-radius: 30px;
+  color: var(--main-color);
 }
 
 #date {
@@ -100,27 +108,12 @@ body {
   font-size: 30px;
 }
 
-#button {
-  height: 200px;
-  width: 200px;
-  border-radius: 30px;
-  font-size: 50px;
-  color: var(--main-color);
-  border: 2px solid var(--main-color);
-  background-color: var(--background-color);
-}
-
-#button:hover {
-  background-color: var(--main-color);
-  color: var(--background-color);
-}
-
 .slot {
   background-color: var(--sub-color);
   width: 90%;
   height: 10%;
   border-radius: 30px;
-  margin: 1% 0;
+  margin-top: 2%;
 
   display: flex;
   align-items: center;
@@ -130,6 +123,29 @@ body {
   font-weight: 600;
 }
 
+#graph {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  border-radius: 30px;
+  padding: 0 2%;
+
+  color: var(--main-color);
+  font-size: 30px;
+}
+
+#myChart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  height: 100%;
+}
+
 @media only screen and (max-width: 1000px) {
   .left {
     display: none;
@@ -137,5 +153,40 @@ body {
 
   .right {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    height: 1000px;
+  }
+  .right {
+    flex-direction: column;
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  #left-main {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slot {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #right-main {
+    width: 100%;
+    height: 100%;
+    margin: 5% 0;
+    padding: 0;
+  }
+
+  #graph {
+    padding: 5% 0;
+    height: 70%;
   }
 }
