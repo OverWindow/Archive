@@ -44,9 +44,10 @@ $button.addEventListener("click", GetPeople);
 
 function GetPeople() {
   var Airtable = require("airtable");
-  var base = new Airtable({ apiKey: "keyLWe1cpGwL7HfFa" }).base(
-    "appgjXaGcMbzfaOnc"
-  );
+  var base = new Airtable({
+    apiKey:
+      "pat68pQq7hRwbYku4.a630ec650bbf1b0c80027a5a8f35ea256670461e4edd2ea8682834926a4175b9",
+  }).base("appgjXaGcMbzfaOnc");
 
   base("Data")
     .select({

@@ -8,9 +8,10 @@ const $slots = document.querySelectorAll(".slot");
 /* Airtable */
 window.onload = function GetData() {
   var Airtable = require("airtable");
-  var base = new Airtable({ apiKey: "keyLWe1cpGwL7HfFa" }).base(
-    "applEsdrNCI75pjhR"
-  );
+  var base = new Airtable({
+    apiKey:
+      "pat68pQq7hRwbYku4.a630ec650bbf1b0c80027a5a8f35ea256670461e4edd2ea8682834926a4175b9",
+  }).base("applEsdrNCI75pjhR");
   let yPredict = [];
   let lowest;
   base("Table 1")
