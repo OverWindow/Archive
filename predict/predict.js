@@ -51,8 +51,10 @@ window.onload = function GetData() {
             console.log(data);
             let xValues = [];
             let yActual = [];
+            let yOpen = [];
             for (let i = 7; i >= 0; i--) {
               xValues.push(data[i].candle_date_time_kst.slice(5, 10));
+              yOpen.push(data[i].opening_price);
               if (i != 0) {
                 yActual.push(data[i].trade_price);
                 lowest = Math.min(lowest, Number(data[i].trade_price));
@@ -68,13 +70,19 @@ window.onload = function GetData() {
                   {
                     label: "Actual Close",
                     data: yActual,
-                    borderColor: "rgb(234, 155, 75)",
+                    borderColor: "red",
                     fill: false,
                   },
                   {
                     label: "Predicted Close",
                     data: yPredict,
-                    borderColor: "red",
+                    borderColor: "rgb(234, 155, 75)",
+                    fill: false,
+                  },
+                  {
+                    label: "Open",
+                    data: yOpen,
+                    borderColor: "blue",
                     fill: false,
                   },
                 ],
