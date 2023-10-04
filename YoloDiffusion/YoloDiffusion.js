@@ -10,6 +10,14 @@ $form.addEventListener(
     user_prompt = $prompt.value;
     url = $url.value;
 
+    //img remove
+    $images = document.getElementsByClassName("img");
+    console.log($images.length);
+    for (let i = $images.length - 1; i >= 0; i--) {
+      console.log($images[i]);
+      $images[i].remove();
+    }
+
     let img = document.createElement("img");
     img.src = url;
     img.className = "img";
