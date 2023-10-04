@@ -12,9 +12,7 @@ $form.addEventListener(
 
     //img remove
     $images = document.getElementsByClassName("img");
-    console.log($images.length);
     for (let i = $images.length - 1; i >= 0; i--) {
-      console.log($images[i]);
       $images[i].remove();
     }
 
@@ -83,7 +81,7 @@ $form.addEventListener(
           safety_checker: "no",
           enhance_prompt: "yes",
           guidance_scale: 7.5,
-          strength: 0.8,
+          strength: 0.55,
           seed: null,
           webhook: null,
           track_id: null,
