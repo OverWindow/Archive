@@ -81,7 +81,7 @@ $form.addEventListener(
           safety_checker: "no",
           enhance_prompt: "yes",
           guidance_scale: 7.5,
-          strength: 0.55,
+          strength: 0.75,
           seed: null,
           webhook: null,
           track_id: null,
@@ -97,6 +97,7 @@ $form.addEventListener(
         fetch("https://stablediffusionapi.com/api/v3/img2img", requestOptions)
           .then((response) => response.json())
           .then((response) => {
+            console.log(response);
             link = response.output[0];
             console.log(link);
 
