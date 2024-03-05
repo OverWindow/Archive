@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap");
+
+/* overall management */
+
+:root {
+  --background-color: white;
+  --main-color: rgb(234, 155, 75);
+  --sub-color: rgb(255, 226, 192);
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Signika Negative", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainFrame {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.imgContainer {
+  width: 23vw;
+  height: 30vw;
+  margin: 1% 0;
+  position: relative;
+}
+
+.imgContainer.rec {
+  width: 30vw;
+  height: 22vw;
+  margin: 1% 0;
+  position: relative;
+}
+
+.imgContainer.wide {
+  width: 48vw;
+  height: 22vw;
+  margin: 1% 0;
+  position: relative;
+}
+
+.imgContainer.long {
+  width: 23vw;
+  height: 51vw;
+  margin: 1% 0;
+  position: relative;
+}
+
+.caption {
+  margin-top: -60%;
+  text-align: center;
+  color: white;
+  font-size: larger;
+  backdrop-filter: blur(0);
+  width: 100%;
+  visibility: hidden;
+}
+
+.caption.rec {
+  margin-top: -40%;
+}
+
+.caption.wide {
+  margin-top: -25%;
+}
+
+.caption.long {
+  margin-top: -80%;
+}
+
+.img {
+  border-radius: 25px;
+  width: 23vw;
+  z-index: -1;
+}
+.img.rec {
+  width: 30vw;
+}
+.img.wide {
+  width: 48vw;
+}
+
+/* .img:hover {
+  border-radius: 50px;
+} */
+
+/* .img.long {
+} */
+
+/* 
+.img:active {
+  filter: blur(3px);
+} */
+
+.end {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nextPage {
+  width: 8%;
+  height: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px black;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 0 1%;
+  color: black;
+  font-weight: 900;
+}
+
+.nextPage.curPage {
+  width: 20%;
+}
+
+.nextPage:hover {
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 915px) {
+  .imgContainer {
+    width: 98vw;
+    height: 133vw;
+    margin: 1% 0;
+    position: relative;
+  }
+
+  .imgContainer.rec {
+    width: 98vw;
+    height: 75vw;
+    margin: 1% 0;
+    position: relative;
+  }
+
+  .imgContainer.wide {
+    width: 98vw;
+    height: 45vw;
+    margin: 1% 0;
+    position: relative;
+  }
+
+  .imgContainer.long {
+    width: 98vw;
+    height: 218vw;
+    margin: 1% 0;
+    position: relative;
+  }
+
+  .img {
+    border-radius: 5px;
+    width: 98vw;
+    z-index: -1;
+  }
+  .img.rec {
+    width: 98vw;
+  }
+  .img.wide {
+    width: 98vw;
+  }
+  .img.long {
+    width: 98vw;
+  }
+
+  .caption {
+    margin-top: -60%;
+    font-size: larger;
+    font-weight: 800;
+  }
+  .caption.rec {
+    margin-top: -30%;
+  }
+  .caption.wide {
+    margin-top: -30%;
+  }
+  .caption.long {
+    margin-top: -90%;
+  }
+}
